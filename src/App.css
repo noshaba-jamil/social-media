@@ -8,3 +8,27 @@
   width: 100%;
    
 }
+.nav-link:hover {
+  background-color:rgb(83, 83, 83); /* purple hover */
+  color: white !important;
+  color: white !important;
+  padding: 3px;
+  text-align: center; 
+  margin: 4px;
+  border: solid white 1px;
+  border-radius: 3px;
+}
+
+
+.nav-link.active {
+  background-color: #FFC107!important; /* active color */
+  color: white !important;
+  padding: 3px;
+  text-align: center;
+  margin: 4px;
+}
+.brand-text {
+  color: #FFC107;
+  font-weight: 100;
+}
+
