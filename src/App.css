@@ -2,6 +2,7 @@
   max-height: 700px;
   display: flex;
   
+  
 }
 
 .custom-container {
@@ -31,4 +32,79 @@
   color: #FFC107;
   font-weight: 100;
 }
+ /* App.css or Post.css */
+ .mypost.card {
+  background-color: #f8f9fa;   /* light grey */
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease-in-out;
+  margin-top: 10px;
+  margin-left: 10px;
+}
 
+.mypost.card:hover {
+  transform: translateY(-4px);
+  border-color: #ffc107; /* yellow border on hover */
+}
+
+.mypost .card-title {
+  color: #212121;  /* dark grey */
+  font-weight: bold;
+}
+
+.mypost .btn {
+  background-color: #ffc107; /* yellow button */
+  color: #212121;            /* dark text */
+  border: none;
+}
+
+.mypost .btn:hover {
+  background-color: #e0a800; /* darker yellow on hover */
+}
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;   /* moves to next line if not enough space */
+  gap: 16px;         /* space between cards */
+}
+   .reaction {
+  font-size: 7px !important;
+  padding: 5px 5px !important;
+  min-width: 27px;
+}
+
+ 
+/* Nav hover effect */
+.nav-hover:hover {
+  color: #ffc107 !important; /* Bootstrap warning yellow */
+  text-decoration: underline;
+  transition: 0.2s ease-in-out;
+}
+
+/* Search input */
+.search-input {
+  width: 300px;
+  
+  border-radius: 20px;
+  padding: 4px 10px;
+  transition: all 0.2s ease;
+  margin-top: 10%;
+}
+
+.search-input:focus {
+  outline:  none;
+  box-shadow: 0 0 6px #ffc107;
+  border-color: #ffc107;
+}
+
+.header-center {
+  display: flex;
+  justify-content: center;  /* centers children horizontally */
+  align-items: center;
+  flex: 1; /* takes full width between nav and other items */
+  gap: 4px;
+}
+.header{
+   font-family: 'Poppins', sans-serif;
+}

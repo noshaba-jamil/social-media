@@ -1,48 +1,50 @@
  import 'bootstrap/dist/css/bootstrap.min.css';
+import { AiFillHome } from "react-icons/ai";
+import { FiPlusCircle } from "react-icons/fi";
+import { FaUsers } from "react-icons/fa"; // logo-style icon
 
 const Slidebar = ({ selectedTab, setSelectedTab }) => {
   return (
     <div
-      className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
-      style={{ width: "180px" }}
+      className="d-flex flex-column p-3 bg-dark text-white shadow-lg"
+      style={{ width: "200px", minHeight: "100vh", borderRight: "1px solid #333" }}
     >
-      <a
-        href="/"
-        className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
-      >
-        <svg
-          className="bi pe-none me-2"
-          width="40"
-          height="32"
-          aria-hidden="true"
-        >
-          <use xlinkHref="#bootstrap"></use>
-        </svg>
-        <span className="fs-4">Sidebar</span>
-      </a>
-      <hr />
-      <ul className="nav nav-pills flex-column mb-auto">
+      {/* Logo / Brand */}
+      <div className="d-flex align-items-center justify-content-center mb-4">
+        <FaUsers size={28} className="text-warning me-2" />
+        <h5 className="m-0 fw-bold text-warning">MyApp</h5>
+      </div>
+      
+      {/* Navigation */}
+      <ul className="nav nav-pills flex-column gap-2">
         <li>
           <a
             href="#"
-            className={`nav-link ${selectedTab === "Home" ? "active" : "text-white"}`}
+            className={`nav-link d-flex align-items-center gap-2 rounded-3 
+              ${selectedTab === "Home" ? "active bg-warning text-dark fw-bold" : "text-white"}`}
             onClick={() => setSelectedTab("Home")}
           >
+            <AiFillHome size={22} />
             Home
           </a>
         </li>
-        
         <li>
           <a
             href="#"
-            className={`nav-link ${selectedTab === "CreatePost" ? "active" : "text-white"}`}
+            className={`nav-link d-flex align-items-center gap-2 rounded-3 
+              ${selectedTab === "CreatePost" ? "active bg-warning text-dark fw-bold" : "text-white"}`}
             onClick={() => setSelectedTab("CreatePost")}
           >
+            <FiPlusCircle size={22} />
             Create Post
           </a>
         </li>
       </ul>
-      <hr />
+
+      {/* Footer */}
+      <div className="mt-auto text-center small text-secondary">
+        © 2025 MyApp
+      </div>
     </div>
   );
 };
