@@ -1,0 +1,55 @@
+/* CreatePost.css */
+
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+form .form-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+form .form-control {
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+form .form-control:focus {
+  border-color: #6f42c1; /* purple shade */
+  box-shadow: 0 0 6px rgba(111, 66, 193, 0.3);
+}
+
+button.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button.btn-primary {
+  background: linear-gradient(135deg, #6f42c1, #9b59b6);
+  border: none;
+  color: #fff;
+}
+
+button.btn-primary:hover {
+  background: linear-gradient(135deg, #5a32a3, #884ea0);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

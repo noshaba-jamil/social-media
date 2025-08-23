@@ -69,9 +69,10 @@
   gap: 16px;         /* space between cards */
 }
    .reaction {
-  font-size: 7px !important;
-  padding: 5px 5px !important;
-  min-width: 27px;
+  font-size: 10px !important;
+  padding: 4px 4px !important;
+  min-width: 28px;
+  margin-top: 6%;
 }
 
  
@@ -89,7 +90,7 @@
   border-radius: 20px;
   padding: 4px 10px;
   transition: all 0.2s ease;
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 .search-input:focus {
@@ -107,4 +108,63 @@
 }
 .header{
    font-family: 'Poppins', sans-serif;
+}
+.createpost {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #f1f0f0;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.createpost .form-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #333;
+}
+
+.createpost .form-control {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.createpost .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+.createpost textarea {
+  resize: none;
+}
+
+.createpost .btn-primary {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background:   #FFC107;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.createpost .btn-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #e3f72f, #ece905);
+  color: #212121;
+}
+
+.createpost .btn-primary:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
 }
