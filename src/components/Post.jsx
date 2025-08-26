@@ -1,5 +1,5 @@
-  import { useContext } from "react";
-import { MdDelete } from "react-icons/md";
+ import { useContext } from "react";
+import { RxCross2 } from "react-icons/rx";  // ✅ Cross icon
 import { PostList } from "../store/Post-list-store";
 
 const Post = ({ post }) => {
@@ -22,11 +22,11 @@ const Post = ({ post }) => {
 
         <span
           className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", fontSize: "0.9rem", padding: "4px 6px" }} // ✅ smaller size
           onClick={() => deletePost(post.id)}
           title="Delete post"
         >
-          <MdDelete />
+          <RxCross2 size={10} /> {/* ✅ smaller cross (14px) */}
         </span>
 
         <p className="card-text">{post.body}</p>
@@ -48,3 +48,4 @@ const Post = ({ post }) => {
 };
 
 export default Post;
+
