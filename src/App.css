@@ -1,121 +1,166 @@
- .social-app {
+ /* Base font setup */
+html {
+  font-size: 16px; /* default for desktop */
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 15px; /* tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px; /* very small devices */
+  }
+}
+
+/* General containers */
+.social-app {
   max-height: 700px;
   display: flex;
-     font-size: 10px;
-  
-  
+  font-size: 1.25rem; /* ~20px */
 }
 
 .custom-container {
   width: 100%;
-   
 }
+
+/* Navbar links */
 .nav-link:hover {
-  background-color:rgb(83, 83, 83); /* purple hover */
+  background-color: rgb(83, 83, 83);
   color: white !important;
-  color: white !important;
-  padding: 3px;
-  text-align: center; 
-  margin: 4px;
+  padding: 0.4rem;
+  text-align: center;
+  margin: 0.3rem;
   border: solid white 1px;
-     font-size: 10px;
+  font-size: 1.1rem;
   border-radius: 3px;
 }
 
-
 .nav-link.active {
-  background-color: #FFC107!important; /* active color */
+  background-color: #FFC107 !important;
   color: white !important;
-     font-size: 10px;
-  
-  padding: 2px;
+  font-size: 1rem; /* was 10px → bumped up */
+  padding: 0.3rem;
   text-align: center;
-  margin: 4px;
+  margin: 0.3rem;
 }
+
 .brand-text {
   color: #FFC107;
-  font-weight: 30;
-     font-size: 10px;
+  font-weight: 500;
+  font-size: 1.25rem;
 }
- /* App.css or Post.css */
- .mypost.card {
-  background-color: #f8f9fa;   /* light grey */
+
+/* Card post */
+.mypost.card {
+  background-color: #f8f9fa;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.05);
   transition: transform 0.2s ease-in-out;
   margin-top: 10px;
   margin-left: 10px;
+  font-size: 1rem;
 }
 
 .mypost.card:hover {
   transform: translateY(-2px);
-  border-color: #ffc107; /* yellow border on hover */
+  border-color: #ffc107;
 }
 
 .mypost .card-title {
-  color: #212121;  /* dark grey */
+  color: #212121;
   font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .mypost .btn {
-  background-color: #ffc107; /* yellow button */
-  color: #212121;            /* dark text */
+  background-color: #ffc107;
+  color: #212121;
   border: none;
+  font-size: 1rem;
 }
 
 .mypost .btn:hover {
-  background-color: #e0a800; /* darker yellow on hover */
+  background-color: #e0a800;
 }
 
+/* Post list */
 .post-list {
   display: flex;
-  flex-wrap: wrap;   /* moves to next line if not enough space */
-  gap: 16px;         /* space between cards */
+  flex-wrap: wrap;
+  gap: 16px;
 }
-   .reaction {
-  font-size: 13px !important;
-  padding: 4px 4px !important;
+
+.reaction {
+  font-size: 0.9rem !important;
+  padding: 4px !important;
   min-width: 28px;
   margin-top: 6%;
 }
 
- 
 /* Nav hover effect */
 .nav-hover:hover {
-  color: #ffc107 !important; /* Bootstrap warning yellow */
+  color: #ffc107 !important;
   text-decoration: underline;
   transition: 0.2s ease-in-out;
-     font-size: 10px;
+  font-size: 1rem;
 }
-
-/* Search input */
+ /* Search Input - Improved */
+ /* Search input */
 .search-input {
   width: 300px;
-  
+  margin-left: 90%;
   border-radius: 20px;
-  padding: 4px 10px;
+  padding: 8px 14px;
   transition: all 0.2s ease;
-  margin-top: 20%;
+  font-size: 1rem;
+  margin-top: 0;           /* ✅ Remove large margin */
+  color: #333;             /* ✅ Ensure text color visible */
 }
 
+.search-input::placeholder {
+  color: #888;             /* ✅ Make placeholder visible */
+  opacity: 1;              /* ✅ Fix bootstrap opacity issue */
+}
+
+
+/* Focus effect */
 .search-input:focus {
-  outline:  none;
-  box-shadow: 0 0 6px #ffc107;
+  outline: none;
+  background-color: #ffe6e6;
+  border-color: #ffc107;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.6);
+}
+
+/* Hover effect */
+.search-input:hover {
   border-color: #ffc107;
 }
 
+
 .header-center {
   display: flex;
-  justify-content: center;  /* centers children horizontally */
+  justify-content: center;
   align-items: center;
-  flex: 1; /* takes full width between nav and other items */
+  flex: 1;
   gap: 4px;
 }
-.header{
-   font-family: 'Poppins', sans-serif;
-   font-size: 10px;
+
+.header {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
 }
+
+/* Create post form */
 .createpost {
   max-width: 600px;
   margin: 30px auto;
@@ -129,23 +174,22 @@
 .createpost .form-label {
   font-weight: 600;
   margin-bottom: 6px;
-  display: block;
   color: #333;
+  font-size: 1rem;
 }
 
 .createpost .form-control {
   width: 100%;
   padding: 10px 12px;
   border-radius: 8px;
-  border: 1px solid #ccc;
-  outline: none;
+  border: 1px solid #c50707;
+  font-size: 1rem;
   transition: all 0.3s ease;
-  font-size: 15px;
 }
 
 .createpost .form-control:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+  border-color: #000305;
+  box-shadow: 0 0 6px rgba(3, 3, 3, 0.4);
 }
 
 .createpost textarea {
@@ -156,10 +200,10 @@
   width: 100%;
   padding: 12px;
   border-radius: 8px;
-  background:   #FFC107;
+  background: #FFC107;
   border: none;
   color: white;
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.3s ease;
@@ -175,33 +219,126 @@
   background: #6c757d;
   cursor: not-allowed;
 }
-/* Full screen overlay for loader */
+
+/* Loader */
 .spinner {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.8); /* light overlay */
+  background: rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* make sure it's above everything */
+  z-index: 9999;
 }
 
-/* Customize bootstrap spinner */
 .spinner-border {
   width: 3rem;
   height: 3rem;
   border-width: 0.4rem;
-  color: #6f42c1; /* purple */
+  color: #6f42c1;
   animation: spin 0.8s linear infinite;
 }
 
-/* Optional smoother spin animation */
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
 }
+ .welcome-card {
+  width: 70%;
+  max-width: 1000px;
+  margin: 50px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
 
+  min-height: 200px;   /* ensures a decent base size */
+  height: auto;        /* grows with content */
+}
+
+
+.welcome-card .card-header {
+  background-color: #ffc107;
+  color: #212121;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.welcome-card .card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.welcome-card .card-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.2rem;
+}
+
+.welcome-card .btn-warning {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.welcome-card .btn-warning:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.welcome-card .card-footer {
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .welcome-card {
+    max-width: 90%;
+    margin: 30px auto;
+  }
+  .welcome-card .card-title {
+    font-size: 1.3rem;
+  }
+  .welcome-card .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-card .card-title {
+    font-size: 1.1rem;
+  }
+  .welcome-card .card-text {
+    font-size: 0.85rem;
+  }
+  .welcome-card .btn-warning {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+/* Login / Signup button alignment */
+.header-actions {
+  margin-left: auto; 
+  margin-top: 2%;  /* pushes buttons to right */
+  display: flex;
+  gap: 10px;           /* spacing between buttons */
+  align-items: center; /* vertical alignment */
+}
+/* Login / Signup button alignment */
+.header-actions {
+  margin-left: auto;   /* pushes buttons to right */
+  display: flex;
+  gap: 10px;           /* spacing between buttons */
+  align-items: center; /* vertical alignment */
+}

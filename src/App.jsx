@@ -2,21 +2,21 @@
 import Header from "./components/Header";
 import Slidebar from "./components/Slidebar";
 import Footer from "./components/Footer";
-import CreatePost from "./components/CreatePost";
-import ListPost from "./components/ListPost";
-import { useState } from "react";
-import PostListProvider from "./store/Post-list-store"; // ✅ import provider
+ 
+
+import PostListProvider, { PostList } from "./store/Post-list-store";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  const [selectedTab, setSelectedTab] = useState("Home");
-
   return (
     <PostListProvider>
       <div className="social-app">
-        <Slidebar selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+        <Slidebar />
         <div className="custom-container">
           <Header />
-          {selectedTab === "Home" ? <ListPost /> : <CreatePost />}
+
+        <Outlet></Outlet>
+         
           <Footer />
         </div>
       </div>
@@ -25,5 +25,3 @@ function App() {
 }
 
 export default App;
-
-
